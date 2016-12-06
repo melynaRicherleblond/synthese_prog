@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<donnees>
+	<joueur>
+		<fortune>1000</fortune>
+		<vies>3</vies>
+	</joueur>
+	<ennemi categorie="faible">
+		<valeur>50</valeur>
+		<vies>20</vies>
+		<vitesse>3</vitesse>
+	</ennemi>
+	<ennemi categorie="fort">
+		<valeur>100</valeur>
+		<vies>50</vies>
+		<vitesse>6</vitesse>
+	</ennemi>
+	<tour categorie="projectile">
+		<cout>100</cout>
+		<portee>10</portee>
+		<vitesse>5</vitesse>
+		<dommage>2</dommage>
+	</tour>
+	<tour categorie="zone">
+		<cout>400</cout>
+		<portee>20</portee>
+		<vitesse>8</vitesse>
+		<dommage>5</dommage>
+	</tour>
+</donnees>
