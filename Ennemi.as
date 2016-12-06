@@ -1,4 +1,4 @@
-﻿package  {
+﻿package{
 	import flash.display.*;
 	import flash.events.*;
 	
@@ -59,7 +59,7 @@
 				placer();
 				
 				if(pos+1 ==lesNodes.length) {
-					//Principal(parent).perteVie();
+					Principal(parent).perteVie();
 					removeEventListener(Event.ENTER_FRAME,loop);
 				}
 			}

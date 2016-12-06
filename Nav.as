@@ -1,4 +1,4 @@
-﻿//////////////////////////////////////////////////////////////////////////// CLASSE STATIQUE: Nav// Auteur: Yanick Bourdel// Automne 2015/////////////////////////////////////////////////////////////////////////package {	import flash.display.*;	import flash.events.*;	import flash.utils.*;	public class Nav{
+﻿//////////////////////////////////////////////////////////////////////////// CLASSE STATIQUE: Nav// Auteur: Yanick Bourdel// Automne 2015/////////////////////////////////////////////////////////////////////////package{	import flash.display.*;	import flash.events.*;	import flash.utils.*;	public class Nav{
 		public static const INTRO:String="Intro";
 		public static const INSTRUCTIONS:String="Instructions";
 		public static const CREDITS:String="Credits";

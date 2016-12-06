@@ -1,4 +1,4 @@
-﻿package {	import flash.display.*;	import flash.events.*;	import flash.sampler.NewObjectSample;
+﻿package{	import flash.display.*;	import flash.events.*;	import flash.sampler.NewObjectSample;
 	import flash.net.*
 	public class Principal extends MovieClip {
 		private var _className:String=Nav.PRINCIPAL;
@@ -41,15 +41,17 @@
 		
 		private function traiterXML(e:Event):void{
 			objXML = new XML(e.target.data);
-			
-			//Test//
+
 			menuAchat_mc.fortune_txt.text = objXML.joueur.fortune;
 			menuAchat_mc.vies_txt.text = objXML.joueur.vies;
 			
 		}
 		
 		public function perteVie(){
-			//
+			var nbVies= parseInt(menuAchat_mc.vies_txt.text);
+			nbVies--;
+			menuAchat_mc.vies_txt.text = nbVies;
+			
 		}
 				private function removedFromStage(e:Event):void {			trace(">> "+_className+" removedFromStage");			// retirer ici tous les écouteurs problématiques			// (en particulier ENTER_FRAME)		}		private function goFin(e:MouseEvent):void {			Nav.go(Nav.FIN,this);		}		private function goIntro(e:MouseEvent):void {			Nav.go(Nav.INTRO,this);		}
 		

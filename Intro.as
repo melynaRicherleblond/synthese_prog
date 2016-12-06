@@ -1,4 +1,4 @@
-﻿package {	import flash.display.*;	import flash.events.*;	public class Intro extends MovieClip {
+﻿package{	import flash.display.*;	import flash.events.*;	public class Intro extends MovieClip {
 		private var _className:String=Nav.INTRO;
 				// CONSTRUCTEUR ------------------		public function Intro() {			trace(">>>>>> "+_className+" créé");      
 			
