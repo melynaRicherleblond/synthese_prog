@@ -3,7 +3,8 @@
 	public class Principal extends MovieClip {
 		private var _className:String=Nav.PRINCIPAL;
 		private var tNodes:Array;
-		private var _ennemi:Ennemi;
+		private var _ennemiFaible:Tank_faible;
+		private var _ennemiFort:Tank_fort;
 		
 		private var objXML :XML;
 		private var loader: URLLoader;
@@ -34,8 +35,15 @@
 		private function loop(e:Event):void{
 			var rand=Math.floor(Math.random()*100);
 			if(rand<2){
-				_ennemi= new Ennemi();
-				addChild(_ennemi);
+				var _randEnnemi=Math.floor(Math.random()*3)+1;
+				if(_randEnnemi<3){
+					_ennemiFaible= new Tank_faible();
+					addChild(_ennemiFaible);
+				}else{
+					_ennemiFort= new Tank_fort();
+					addChild(_ennemiFort);
+				}
+				
 			}
 		}
 		
