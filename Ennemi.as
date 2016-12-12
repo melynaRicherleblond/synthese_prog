@@ -59,10 +59,15 @@
 				placer();
 				
 				if(pos+1 ==lesNodes.length) {
-					Principal(parent).perteVie();
 					removeEventListener(Event.ENTER_FRAME,loop);
+					Principal(parent).perteVie();
+					kill();
+					
 				}
 			}
+		}
+		private function kill():void{
+			Principal(parent).removeChild(this);
 		}
 	}
 	

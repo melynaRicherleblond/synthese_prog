@@ -25,6 +25,7 @@
 		private var _node7: Node;
 		private var _node8: Node;
 		private var _node9: Node;
+
 		// CONSTRUCTEUR ------------------
 		public function Principal() {
 
@@ -41,23 +42,20 @@
 			btFin.addEventListener(MouseEvent.CLICK, goFin);
 			btIntro.addEventListener(MouseEvent.CLICK, goIntro);
 
-			//tNodes= [node_mc_1,node_mc_2,node_mc_3,node_mc_4,node_mc_5,node_mc_6,node_mc_7,node_mc_8,node_mc_9];
 		}
 		private function init(e: Event): void {
 			trace(">> " + _className + " addedToStage");
 
-			addEventListener(Event.ENTER_FRAME, loop);
-
 			level = [
+				[0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0],
 				[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-				[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-				[0, 0, 2, 1, 1, 1, 1, 1, 3, 0, 0],
+				[0, 0, 3, 1, 1, 1, 1, 1, 4, 0, 0],
 				[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
 				[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-				[0, 0, 7, 1, 1, 6, 0, 0, 1, 0, 0],
+				[0, 0, 8, 1, 1, 7, 0, 0, 1, 0, 0],
 				[0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0],
 				[0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0],
-				[9, 1, 8, 0, 0, 5, 1, 1, 4, 0, 0],
+				[10, 1, 9, 0, 0, 6, 1, 1, 5, 0, 0],
 				[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 			];
 
@@ -72,64 +70,59 @@
 						_tuile = new Tuile(true);
 
 						if (level[i][j] > 1) {
-							_node = new Node();
-
-							_node.x = j * 60;
-							_node.y = i * 60;
-							addChild(_node)
 							switch (level[i][j]) {
-								case 1:
+								case 2:
 									_node1 = new Node();
-									_node1.x = j * 60;
-									_node1.y = i * 60;
+									_node1.x = j * 60+30;
+									_node1.y = i * 60+30;
 									addChild(_node1);
 									break;
-								case 2:
+								case 3:
 									_node2 = new Node();
-									_node2.x = j * 60;
-									_node2.y = i * 60;
+									_node2.x = j * 60+30;
+									_node2.y = i * 60+30;
 									addChild(_node2);
 									break;
-								case 3:
+								case 4:
 									_node3 = new Node();
-									_node3.x = j * 60;
-									_node3.y = i * 60;
+									_node3.x = j * 60+30;
+									_node3.y = i * 60+30;
 									addChild(_node3);
 									break;
-								case 4:
+								case 5:
 									_node4 = new Node();
-									_node4.x = j * 60;
-									_node4.y = i * 60;
+									_node4.x = j * 60+30;
+									_node4.y = i * 60+30;
 									addChild(_node4);
 									break;
-								case 5:
+								case 6:
 									_node5 = new Node();
-									_node5.x = j * 60;
-									_node5.y = i * 60;
+									_node5.x = j * 60+30;
+									_node5.y = i * 60+30;
 									addChild(_node5);
 									break;
-								case 6:
+								case 7:
 									_node6 = new Node();
-									_node6.x = j * 60;
-									_node6.y = i * 60;
+									_node6.x = j * 60+30;
+									_node6.y = i * 60+30;
 									addChild(_node6);
 									break;
-								case 7:
+								case 8:
 									_node7 = new Node();
-									_node7.x = j * 60;
-									_node7.y = i * 60;
+									_node7.x = j * 60+30;
+									_node7.y = i * 60+30;
 									addChild(_node7);
 									break;
-								case 8:
+								case 9:
 									_node8 = new Node();
-									_node8.x = j * 60;
-									_node8.y = i * 60;
+									_node8.x = j * 60+30;
+									_node8.y = i * 60+30;
 									addChild(_node8);
 									break;
-								case 9:
+								case 10:
 									_node9 = new Node();
-									_node9.x = j * 60;
-									_node9.y = i * 60;
+									_node9.x = j * 60+30;
+									_node9.y = i * 60+30;
 									addChild(_node9);
 									break;
 							}
@@ -143,7 +136,9 @@
 				}
 
 			}
-
+			tNodes= [_node1,_node2,_node3,_node4,_node5,_node6,_node7,_node8,_node9];
+			//trace(_node1.x,_node1.y);
+		addEventListener(Event.ENTER_FRAME, loop);
 		}
 
 		private function loop(e: Event): void {
