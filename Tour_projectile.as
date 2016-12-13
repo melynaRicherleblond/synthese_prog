@@ -4,22 +4,15 @@
 	import flash.sampler.NewObjectSample;
 	import flash.net.*
 	
-	public class Defense extends MovieClip{
-		protected var leXML:XML;
-		protected var _cout:uint;
-		
-		public function Defense() {
+	public class Tour_projectile extends Defense{
+		public function Tour_projectile() {
 			// constructor code
 			addEventListener(Event.ADDED_TO_STAGE,init);
 		}
 		private function init(e:Event):void{
-			leXML=Principal(parent).getXML();
-
+			_cout=leXML.tour.(@categorie=="projectile").cout;
+			trace(_cout);
 		}
-		public function getCout(){
-			return _cout;
-		}
-
 	}
 	
 }

@@ -2,7 +2,7 @@
 <donnees>
 	<joueur>
 		<fortune>1000</fortune>
-		<vies>3</vies>
+		<vies>300</vies>
 	</joueur>
 	<ennemi categorie="faible">
 		<valeur>50</valeur>
